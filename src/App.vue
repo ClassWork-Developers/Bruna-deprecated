@@ -1,85 +1,56 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <v-layout class="po-absolute">
+    <v-app-bar prominent>
+      <v-app-bar-nav-icon
+        variant="text"
+        color="amber-darken-2"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <v-toolbar-title>
+        <RouterLink to="/">Bruna</RouterLink>
+      </v-toolbar-title>
+      <p>Coordinación</p>
+      <v-spacer></v-spacer>
+      <v-btn variant="text" icon="fas fa-plus"></v-btn>
+    </v-app-bar>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+    <v-navigation-drawer v-model="drawer" location="left" temporary>
+      <v-list class="d-flex flex-column">
+        <RouterLink to="/" class="ma-2">
+          <font-awesome-icon icon="fa-home" />
+          Inicio
+        </RouterLink>
+        <RouterLink to="usuario" class="ma-2">
+          <font-awesome-icon icon="fa-user" />
+          Perfil
+        </RouterLink>
+      </v-list>
+    </v-navigation-drawer>
+  </v-layout>
   <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<script>
+export default {
+  data: () => ({
+    drawer: false,
+    group: null,
+  }),
+
+  watch: {
+    group() {
+      this.drawer = false;
+    },
+  },
+};
+</script>
+<style>
+#app > div.v-layout.po-absolute > nav > div > div {
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.po-absolute {
+  /* position: absolute; */
 }
 </style>
