@@ -1,9 +1,21 @@
 a {
-  color: $primary;
+  color: $primario;
   font-weight: bold;
   padding: .5rem;
   transition: 0.4s;
   &:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
   }
+}
+.titulo-logo {
+  color: $color-heading;
+  font-family: $font-family-primaria;
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+
+.main-container {
+  width: calc(100vw / 2);
+  margin: auto;
+  margin-top: 3rem;
 }

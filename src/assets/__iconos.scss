@@ -1,0 +1,11 @@
+i.logo::before {
+  display: block;
+  width: 100%;
+  content: url("./logo.svg");
+}
+i.logo {
+  display: block;
+  position: absolute;
+  top: -2.3rem;
+  left: 10rem;
+}

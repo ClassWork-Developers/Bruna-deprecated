@@ -5,6 +5,20 @@ import {
   faUser,
   faHome,
   faChevronDown,
+  faChevronUp,
+  faRightFromBracket,
+  faCaretDown,
+  faCaretUp,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBars, faPlus, faUser, faHome, faChevronDown);
+library.add(
+  faBars,
+  faPlus,
+  faUser,
+  faHome,
+  faChevronDown,
+  faChevronUp,
+  faRightFromBracket,
+  faCaretDown,
+  faCaretUp
+);

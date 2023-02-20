@@ -14,6 +14,11 @@ const router = createRouter({
       name: "Perfil",
       component: () => import("../components/PerfilUsuario.vue"),
     },
+    {
+      path: "/seccion",
+      name: "Sección",
+      component: () => import("../components/VistaSeccion.vue"),
+    },
   ],
 });
 
