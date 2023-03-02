@@ -16,7 +16,13 @@
         :error-messages="user.errorMessage.value"
         label="Usuario"
       ></v-text-field>
-
+      <v-text-field
+        v-if="modoRegistro"
+        v-model="phone.value.value"
+        :counter="7"
+        :error-messages="phone.errorMessage.value"
+        label="Phone Number"
+      ></v-text-field>
       <v-text-field
         v-if="modoRegistro"
         v-model="email.value.value"
@@ -67,6 +73,11 @@ export default {
           if (value?.length >= 4 && modoRegistro.value) return true;
 
           return "Debes indicar tu nombre y apellido";
+        },
+        phone(value) {
+          if (value?.length > 9 && /[0-9-]+/.test(value)) return true;
+
+          return "Phone number needs to be at least 9 digits.";
         },
         user(value) {
           if (value?.length >= 4) return true;
