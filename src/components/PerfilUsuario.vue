@@ -2,10 +2,7 @@
   <section class="main-container">
     <div class="d-flex justify-center">
       <v-avatar size="70">
-        <v-img
-          src="https://cdn.vuetifyjs.com/images/john.jpg"
-          alt="Mildred"
-        ></v-img>
+        <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="Mildred"></v-img>
       </v-avatar>
     </div>
     <p class="text-h4 text-center my-3">Mildred</p>

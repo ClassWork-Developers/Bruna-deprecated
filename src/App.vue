@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-app-bar color="amber-accent-3" prominent>
+    <v-app-bar v-if="this.$route.path !== '/Log'" color="amber-accent-3" prominent>
       <v-app-bar-nav-icon
         variant="text"
         color="white"
@@ -25,6 +25,7 @@
             variant="text"
             color="grey-lighten-5"
             icon="fas fa-right-from-bracket"
+            @click="this.$router.push('Log')"
           ></v-btn>
         </v-col>
       </v-row>
@@ -57,11 +58,8 @@ export default {
   }),
   watch: {
     tema() {
-      document.documentElement.setAttribute(
-        "tema",
-        this.temaLight ? "light" : "dark"
-      );
-      console.log(document.documentElement)
+      document.documentElement.setAttribute("tema", this.temaLight ? "light" : "dark");
+      console.log(document.documentElement);
     },
     group() {
       this.drawer = false;

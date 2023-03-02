@@ -9,6 +9,8 @@ import {
   faRightFromBracket,
   faCaretDown,
   faCaretUp,
+  faCircle,
+  faDotCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -20,5 +22,7 @@ library.add(
   faChevronUp,
   faRightFromBracket,
   faCaretDown,
-  faCaretUp
+  faCaretUp,
+  faCircle,
+  faDotCircle,
 );

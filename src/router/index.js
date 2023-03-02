@@ -19,6 +19,11 @@ const router = createRouter({
       name: "Sección",
       component: () => import("../components/VistaSeccion.vue"),
     },
+    {
+      path: "/Log",
+      name: "Log",
+      component: () => import("../views/VistaRegistro.vue"),
+    }
   ],
 });
 
