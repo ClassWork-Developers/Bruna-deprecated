@@ -36,6 +36,7 @@
         label="Contraseña"
       ></v-text-field>
 
+      <!-- prepend-icon="circle-dot" -->
       <v-radio-group
         v-if="modoRegistro"
         v-model="rol.value"
@@ -104,6 +105,7 @@ export default {
     });
     const name = useField("name");
     const user = useField("user");
+    const phone = useField("phone");
     const email = useField("email");
     const password = useField("password");
 
@@ -113,7 +115,7 @@ export default {
       alert(JSON.stringify(values, null, 2));
     });
 
-    return { name, user, email, password, rol, submit, handleReset, modoRegistro };
+    return { name, user, email, password, phone, rol, submit, handleReset, modoRegistro };
   },
 };
 </script>

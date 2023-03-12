@@ -17,9 +17,9 @@
         <v-col>
           <p class="color-heading bold">Coordinación</p>
         </v-col>
-        <v-col cols="2">
+        <!-- <v-col cols="2">
           <v-switch v-model="temaLight" inset />
-        </v-col>
+        </v-col> -->
         <v-col cols="2">
           <v-btn
             variant="text"

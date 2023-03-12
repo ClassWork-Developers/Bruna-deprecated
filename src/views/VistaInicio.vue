@@ -1,5 +1,6 @@
 <template>
   <section class="main-container">
+    <AggEstudiante />
     <v-expansion-panels>
       <v-expansion-panel>
         <v-expansion-panel-title>
@@ -111,9 +112,15 @@
   </section>
 </template>
 <script>
+import AggEstudiante from "@/components/AggEstudiante.vue";
 export default {
-  data: () => ({}),
+  components: {
+    AggEstudiante,
+  },
+  data() {
+    return {
+      modal: false,
+    };
+  },
 };
 </script>
-
-<style lang="scss"></style>
